@@ -13,6 +13,9 @@
 		DBCBEC16250F5BB500BEB6A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBEC15250F5BB500BEB6A1 /* Preview Assets.xcassets */; };
 		DBCBEC18250F5BB500BEB6A1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEC17250F5BB500BEB6A1 /* Persistence.swift */; };
 		DBCBEC1B250F5BB500BEB6A1 /* TestTwo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEC19250F5BB500BEB6A1 /* TestTwo.xcdatamodeld */; };
+		DBCBEC25250F5D9200BEB6A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCBEC24250F5D9200BEB6A1 /* CloudKit.framework */; };
+		DBCBEC2F250FA14800BEB6A1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEC2E250FA14800BEB6A1 /* Account.swift */; };
+		DBCBEC31250FA23D00BEB6A1 /* CloudKitAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEC30250FA23D00BEB6A1 /* CloudKitAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		DBCBEC17250F5BB500BEB6A1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DBCBEC1A250F5BB500BEB6A1 /* TestTwo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestTwo.xcdatamodel; sourceTree = "<group>"; };
 		DBCBEC1C250F5BB500BEB6A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBCBEC22250F5D8B00BEB6A1 /* TestTwo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestTwo.entitlements; sourceTree = "<group>"; };
+		DBCBEC24250F5D9200BEB6A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DBCBEC2E250FA14800BEB6A1 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		DBCBEC30250FA23D00BEB6A1 /* CloudKitAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBEC25250F5D9200BEB6A1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				DBCBEC0D250F5BB400BEB6A1 /* TestTwo */,
 				DBCBEC0C250F5BB400BEB6A1 /* Products */,
+				DBCBEC23250F5D9200BEB6A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +65,16 @@
 		DBCBEC0D250F5BB400BEB6A1 /* TestTwo */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBEC0E250F5BB400BEB6A1 /* TestTwoApp.swift */,
+				DBCBEC22250F5D8B00BEB6A1 /* TestTwo.entitlements */,
 				DBCBEC10250F5BB400BEB6A1 /* ContentView.swift */,
+				DBCBEC0E250F5BB400BEB6A1 /* TestTwoApp.swift */,
 				DBCBEC12250F5BB500BEB6A1 /* Assets.xcassets */,
 				DBCBEC17250F5BB500BEB6A1 /* Persistence.swift */,
 				DBCBEC1C250F5BB500BEB6A1 /* Info.plist */,
 				DBCBEC19250F5BB500BEB6A1 /* TestTwo.xcdatamodeld */,
 				DBCBEC14250F5BB500BEB6A1 /* Preview Content */,
+				DBCBEC2E250FA14800BEB6A1 /* Account.swift */,
+				DBCBEC30250FA23D00BEB6A1 /* CloudKitAccount.swift */,
 			);
 			path = TestTwo;
 			sourceTree = "<group>";
@@ -73,6 +85,14 @@
 				DBCBEC15250F5BB500BEB6A1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBCBEC23250F5D9200BEB6A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBEC24250F5D9200BEB6A1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +166,8 @@
 			files = (
 				DBCBEC18250F5BB500BEB6A1 /* Persistence.swift in Sources */,
 				DBCBEC11250F5BB400BEB6A1 /* ContentView.swift in Sources */,
+				DBCBEC31250FA23D00BEB6A1 /* CloudKitAccount.swift in Sources */,
+				DBCBEC2F250FA14800BEB6A1 /* Account.swift in Sources */,
 				DBCBEC1B250F5BB500BEB6A1 /* TestTwo.xcdatamodeld in Sources */,
 				DBCBEC0F250F5BB400BEB6A1 /* TestTwoApp.swift in Sources */,
 			);
@@ -275,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestTwo/TestTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTwo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UR9TA6744;
@@ -297,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestTwo/TestTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTwo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UR9TA6744;
