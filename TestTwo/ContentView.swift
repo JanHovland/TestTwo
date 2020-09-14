@@ -37,7 +37,6 @@ struct ContentView: View {
                         print(err)
                     }
                 }
-                
             }, label: {
                 Image(systemName: "magnifyingglass")
                     .resizable()
@@ -46,16 +45,10 @@ struct ContentView: View {
                     .font(.title)
             })
         }
-
-        
-        
-        
-
         .onAppear {
             refresh()
         }
     }
-    
     
     func refresh() {
         self.accounts.removeAll()
