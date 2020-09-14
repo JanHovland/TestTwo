@@ -23,7 +23,7 @@ struct CloudKitAccount {
     
     /// MARK: - saving to CloudKit
     static func saveAccount(item: Account, completion: @escaping (Result<Account, Error>) -> ()) {
-        let itemRecord = CKRecord(recordType: RecordType.account)
+        let itemRecord = CKRecord(recordType: "Account") // RecordType.account)
         itemRecord["name"] = item.name as CKRecordValue
         itemRecord["email"] = item.email as CKRecordValue
         itemRecord["password"] = item.password as CKRecordValue

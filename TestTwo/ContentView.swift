@@ -26,9 +26,9 @@ struct ContentView: View {
         
         VStack {
             Button(action: {
-                account.name = "Per Olsen"
-                account.email = "per.olsen.lyse.net"
-                account.password = "qwerty"
+                account.name = "Xxx Xxxxx"
+                account.email = "xxx.xxxxx.lyse.net"
+                account.password = "xxxxxx"
                 CloudKitAccount.saveAccount(item: account) { (result) in
                     switch result {
                     case .success:
@@ -65,7 +65,7 @@ struct ContentView: View {
             switch result {
             case .success(let account):
                 accounts.append(account)
-                accounts.sort(by: {$0.name > $1.name})
+                accounts.sort(by: {$0.name < $1.name})
             case .failure(let err):
                 print(err)
             }
