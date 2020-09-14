@@ -11,7 +11,8 @@ struct PersistenceController {
     static let shared = PersistenceController()
     let container: NSPersistentCloudKitContainer
     init(inMemory: Bool = false) {
-        /// The name of the container must be the same as the Project ("TestTwo")
+        /// The name of the container must be the same as the Bundle Identifier ("TestTwo")
+        /// You can change the Bundle Identifier to use another Container
         container = NSPersistentCloudKitContainer(name: "TestTwo")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
