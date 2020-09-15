@@ -16,3 +16,10 @@ struct Account: Identifiable {
     var password: String = ""
     var image: UIImage?
 }
+
+class User: ObservableObject {
+    var name: String = ""
+    var email: String = ""
+    var password: String = ""
+    var image: UIImage?
+}
